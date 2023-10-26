@@ -20,6 +20,15 @@
             font-size: 70px;
         }
 
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            color:azure;
+            text-align: center;
+            margin-bottom: 0%;
+            margin-top: 1%;
+            font-size: 30px;
+        }
+
         button{
             width: 100px;
             height: 100px;
@@ -57,38 +66,41 @@
     </style>
 </head>
 <body>
-    <h1><strong>Calculadora Simple - Giuliano Crenna</strong></h1>
+    <h1><strong>Calculadora Simple</strong></h1>
+    <h2>Giuliano Crenna</h2>
     <br>
 
     <div class="calculadora">
         <p id="pantalla" class="pantallaStyle"><strong>0</strong></p>
         <div class="buttons">
+            <button id="(">(</button>
+            <button id=")">)</button>
+            <button id="C">C</button>
+            <button id="=">=</button>
+        </div>
+        <div class="buttons">
             <button id="9">9</button>
             <button id="8">8</button>
             <button id="7">7</button>
-            <button id="C">C</button>
+            <button id="+">+</button>
         </div>
         <div class="buttons">
             <button id="6">6</button>
             <button id="5">5</button>
             <button id="4">4</button>
-            <button id="*">*</button>
+            <button id="-">-</button>
         </div>
         <div class="buttons">
             <button id="3">3</button>
             <button id="2">2</button>
             <button id="1">1</button>
-            <button id="/">/</button>
+            <button id="*">*</button>
         </div>
         <div class="buttons">
-            <button id="+">+</button>
+            <button></button>
             <button id="0">0</button>
-            <button id="-">-</button>
-            <button id="=">=</button>
-        </div>
-        <div class="buttons">
-            <button id="(">(</button>
-            <button id=")">)</button>
+            <button id="punto">.</button>
+            <button id="/">/</button>
         </div>
     </div>
 </body>
@@ -143,5 +155,5 @@
     document.getElementById("=").addEventListener("click", function(){calcular()});
     document.getElementById("(").addEventListener("click", function(){añadirValores("(")});
     document.getElementById(")").addEventListener("click", function(){añadirValores(")")});
-
+    document.getElementById("punto").addEventListener("click", function(){añadirValores(".")});
 </script>
